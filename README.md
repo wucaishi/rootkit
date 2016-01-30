@@ -7,6 +7,9 @@ Just compile module (included Makefile does this against current kernel) and loa
 
 Just `cat /proc/rtkit` to see available commands. You can use attached program to give orders or use `echo -n` (don't forget `-n`, there should be no tailing new line).
 
+编译过后insmod rk.ko 加载内核模块
+
+
 Examples:
 ``echo -n thf >> /proc/rtkit``
 ``./rtcmd.py hp1337``
